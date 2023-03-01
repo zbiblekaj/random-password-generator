@@ -22,7 +22,8 @@ var specialCharacters = [
   '~',
   '-',
   '_',
-  '.'
+  '.',
+  ' '
 ];
 
 // Array of numeric characters to be included in password
@@ -90,34 +91,30 @@ var upperCasedCharacters = [
 
 // define variables
 let password = "";
+let passwordLength = [];
 
 // Function to prompt user for password options. all of the prompts should be wrapped in this function.
 function userOptions() {
   // password length.
-  let passwordLength = prompt ("Enter the length you would like your password to be - between 10 & 64 characters: "); 
+  let passwordLength = parseInt(prompt("Enter the length you would like your password to be - between 10 & 64 characters: ")); 
     if (passwordLength >= 10 && passwordLength <= 64) {
       alert ("You have selected ${passwordLength} characters");
     } else {
       alert ("Response is not valid");
     }
-    var userChoiceLength = parsInt(passwordLength);
-  
-  // whether the password includes capital letters or not.
-  let includeCaps = confirm ("Press OK if you would like to include capital letters in your password, otherwise, press cancel.");
-  let includeLowerCase = confirm ("Press OK if you would like to include lower case letters in your password, otherwise, press cancel.");
-  let includeNumbers = confirm ("Press OK if you would like to include numbers in your password, otherwise, press cancel.");
-
-  return userOptions;
+      let includeCaps = confirm ("Press OK if you would like to include capital letters in your password, otherwise, press cancel.");
+      let includeLowerCase = confirm ("Press OK if you would like to include lower case letters in your password, otherwise, press cancel.");
+      let includeNumbers = confirm ("Press OK if you would like to include numbers in your password, otherwise, press cancel.");
+    
 }
 
 // Function for getting a random element from an array. rock paper scissors.
 function getRandom(arr) {
-
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 
 // Function to generate password with user input. use above functions to implement this.
 function generatePassword() {
-
 }
 
 // Get references to the #generate element. 

@@ -22,3 +22,8 @@ STEPS:
 
 2. the second step is to add the prompts within a function using if else statements for the result. 
 
+create a function called USEROPTIONS 
+create the first prompt: 
+- specify a variable to determine which prompt this is, (password length) & then create a prompt asking the user to enter in a number. 
+- create an if else statement specifying what the alert should be if the user enters in a number, or if they enter a number not specified within the criteria. 
+
