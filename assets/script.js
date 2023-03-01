@@ -88,9 +88,26 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options. all of the prompts should be wrapped in this function.
-function getPasswordOptions() {
+// define variables
+let password = "";
 
+// Function to prompt user for password options. all of the prompts should be wrapped in this function.
+function userOptions() {
+  // password length.
+  let passwordLength = prompt ("Enter the length you would like your password to be - between 10 & 64 characters: "); 
+    if (passwordLength >= 10 && passwordLength <= 64) {
+      alert ("You have selected ${passwordLength} characters");
+    } else {
+      alert ("Response is not valid");
+    }
+    var userChoiceLength = parsInt(passwordLength);
+  
+  // whether the password includes capital letters or not.
+  let includeCaps = confirm ("Press OK if you would like to include capital letters in your password, otherwise, press cancel.");
+  let includeLowerCase = confirm ("Press OK if you would like to include lower case letters in your password, otherwise, press cancel.");
+  let includeNumbers = confirm ("Press OK if you would like to include numbers in your password, otherwise, press cancel.");
+
+  return userOptions;
 }
 
 // Function for getting a random element from an array. rock paper scissors.
@@ -103,7 +120,7 @@ function generatePassword() {
 
 }
 
-// Get references to the #generate element. DONT WORRY ABOUT THIS PART.
+// Get references to the #generate element. 
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
