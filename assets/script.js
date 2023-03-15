@@ -35,22 +35,24 @@ let passwordLength = [];
 function userOptions() {
   // create a prompt for the user to determine their password length.
     // validate the input - ensure the character length is between 10 & 64.
+      // lowercase, upercase, or special characters
+        //validate the input = ensure at least one character type is being selected.
   let passwordLength = parseInt(prompt("How many characters would you like your password to have? - between 10 & 64 characters: ")); 
     if (passwordLength >= 10 && passwordLength <= 64) {
       alert ("You have selected ${passwordLength} characters");
-    } 
-    
-    
-    else {
+    } if (){
+      let includeCaps = confirm ("Press OK if you would like to include capital letters in your password, otherwise, press cancel.");
+    } if (){
+      let includeLowerCase = confirm ("Press OK if you would like to include lower case letters in your password, otherwise, press cancel.");
+    } if {
+      let includeNumbers = confirm ("Press OK if you would like to include numbers in your password, otherwise, press cancel.");
+    } if {
+      let includeSpecialCharacters = confirm ("Press OK if you would like to include special characters in your password, otherwise, press cancel.");
+    } else {
       alert ("Response is not valid");
     }
-    // lowercase, upercase, or special characters
-      //validate the input = ensure at least one character type is being selected.
-      let includeCaps = confirm ("Press OK if you would like to include capital letters in your password, otherwise, press cancel.");
-      let includeLowerCase = confirm ("Press OK if you would like to include lower case letters in your password, otherwise, press cancel.");
-      let includeNumbers = confirm ("Press OK if you would like to include numbers in your password, otherwise, press cancel.");
-      let includeSpecialCharacters = confirm ("Press OK if you would like to include special characters in your password, otherwise, press cancel.");
-  
+
+
   //display generated password on the page.
   return "generated password";
 }
@@ -64,13 +66,13 @@ let character = [];
 function generatePassword() {
   userOptions();
   if (userOptions.includeCaps) {
-    characters = characters.concat(upperCasedCharacters)
+    character = character.concat(getCharacters.upperCasedCharacters)
   } if (userOptions.includeLowerCase) {
-    characters = characters.concat(lowerCasedCharacters)
+    character = character.concat(getCharacters.lowerCasedCharacters)
   } if (userOptions.includeNumbers) {
-    characters = characters.concat(numericCharacters) 
+    character = character.concat(getCharacters.numericCharacters) 
   } if (userOptions.includeSpecialCharacters) {
-    characters = characters.concat(specialCharacters);
+    character = character.concat(getCharacters.specialCharacters);
   }
 }
 
